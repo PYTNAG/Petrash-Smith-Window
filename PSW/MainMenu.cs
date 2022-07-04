@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using PSW.Model;
+using Model;
+using Model.Modules;
 
 namespace PSW
 {
     public partial class MainMenu : Form
     {
-        private LKCamera _camera;
-        private Dictionary<Location, Form> _forms;
+        private readonly LKCamera _camera;
+        private readonly Dictionary<Location, Form> _forms;
 
-        private Player _player;
+        private readonly Player _player;
 
         public MainMenu()
         {
@@ -28,6 +29,12 @@ namespace PSW
 
             _player = new Player();
             _player.OnMove += LocationUpdated;
+            _player.OnEnd += End;
+        }
+
+        private void End(Result r)
+        {
+
         }
 
         private void NewGame_Click(object sender, EventArgs e)

@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using PSW.Model;
+using Model.Modules;
 
 namespace PSW
 {
@@ -31,7 +24,8 @@ namespace PSW
                 throw new Exception("Module must be Registration Module");
 
             _module = rModule;
-            _module.SubscribeOnUpdate(UpdateValues);
+            _module.SubscribeOnFix(UpdateValues);
+            _module.SubscribeOnCountUpdate(UpdateValues);
             UpdateValues();
         }
 

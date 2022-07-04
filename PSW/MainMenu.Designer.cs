@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.NewGame = new System.Windows.Forms.Button();
-            this.Load = new System.Windows.Forms.Button();
+            this.LoadGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewGame
@@ -42,16 +42,16 @@
             this.NewGame.UseVisualStyleBackColor = true;
             this.NewGame.Click += new System.EventHandler(this.NewGame_Click);
             // 
-            // Load
+            // LoadGame
             // 
-            this.Load.AutoSize = true;
-            this.Load.Location = new System.Drawing.Point(12, 71);
-            this.Load.Name = "Load";
-            this.Load.Size = new System.Drawing.Size(390, 52);
-            this.Load.TabIndex = 1;
-            this.Load.Text = "Загрузить";
-            this.Load.UseVisualStyleBackColor = true;
-            this.Load.Click += new System.EventHandler(this.Load_Click);
+            this.LoadGame.AutoSize = true;
+            this.LoadGame.Location = new System.Drawing.Point(12, 71);
+            this.LoadGame.Name = "LoadGame";
+            this.LoadGame.Size = new System.Drawing.Size(390, 52);
+            this.LoadGame.TabIndex = 1;
+            this.LoadGame.Text = "Загрузить";
+            this.LoadGame.UseVisualStyleBackColor = true;
+            this.LoadGame.Click += new System.EventHandler(this.Load_Click);
             // 
             // MainMenu
             // 
@@ -59,7 +59,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(414, 135);
-            this.Controls.Add(this.Load);
+            this.Controls.Add(this.LoadGame);
             this.Controls.Add(this.NewGame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainMenu";
@@ -72,7 +72,7 @@
         #endregion
 
         private System.Windows.Forms.Button NewGame;
-        private System.Windows.Forms.Button Load;
+        private System.Windows.Forms.Button LoadGame;
     }
 }
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using PSW.Model;
+using Model;
 
 namespace PSW
 {
@@ -16,7 +16,7 @@ namespace PSW
     {
         private Player _player;
 
-        private Dictionary<Location, Button> _buttons;
+        private readonly Dictionary<Location, Button> _buttons;
 
         public Actions()
         {
